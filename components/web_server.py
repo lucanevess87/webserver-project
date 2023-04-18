@@ -29,6 +29,10 @@ class WebServer:
     def handle_success(self):
         print("handle_success")
 
+    # Create interface
+    def create_interface(self):
+        print("create_interface")
+
     def handle_http_message(self, http_message):
         # ex: ['GET', '/favicon.ico', 'HTTP/1.1']
         http_request, file, http_version = http_message.split('\r\n')[
@@ -71,7 +75,7 @@ class WebServer:
                     http_content = self.handle_http_message(http_message)
 
                     if http_content.file == '/':
-                        self.create_index(
+                        self.create_interface(
                             socket_client, self.documents_list, '')
 
                     # http version error
