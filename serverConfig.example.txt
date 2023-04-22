@@ -1,0 +1,8 @@
+- Instructions:
+    1. Put your local folder path at "LocalFolder;"
+    2. Put your errors folder path at "LocalErrors;"
+    3. IMPORTANT: DON`T FORGET THE ";"
+
+- Example:
+LocalFolder;C:\Users\lucan\OneDrive\Documentos\Redes\webserver-project\local
+LocalErrors;C:\Users\lucan\OneDrive\Documentos\Redes\webserver-project\errors
