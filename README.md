@@ -10,3 +10,7 @@ Este servidor web é capaz de lidar com vários tipos de erros HTTP, como 400 Ba
 1. Clonar projeto.
 2. Com o projeto aberto em sua IDE de preferência, você irá observar dois arquivos com terminação .txt, leia o arquivo “serverConfig.example.txt” e o tenha como guia para configurar o “serverConfig.txt”. O intuito desta etapa é colocar o seu path da pasta local e pasta errors (ambas já estão dentro do projeto) no devido lugar para que a aplicação consiga saber de onde puxar os arquivos necessários.
 3. Agora é só rodar o projeto e abrir uma aba do navegador em “localhost:1111”. Desse modo, os arquivos já devem estar listados em sua tela e basta clicar em algum deles para testar.
+
+## OBS!!
+1. Para testar error 403 Forbidden Request é só passar na url "/admin"
+2. Para testar error 404 Not Found é só passar na url qualquer arquivo inexistente, ex "arquivo-fake.jpeg"
