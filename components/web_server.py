@@ -8,6 +8,7 @@ from components.http_request_content import *
 
 port = 1111
 
+
 class WebServer:
     def __init__(self, documents, errors):
         self.web_server = socket(AF_INET, SOCK_STREAM)
@@ -126,24 +127,9 @@ class WebServer:
         # ex: ['GET', '/favicon.ico', 'HTTP/1.1']
         http_request, file, http_version = msg_http.split('\r\n')[0].split(' ')
 
-        # dir_path = os.path.dirname(os.path.realpath(__file__))
-        # print(dir_path)
-
         # If has index.html at our documents we can already assign value else it will be generate
         if file == '/' and 'index.html' in self.documents_list:
-            # page_path = dir_path + '/../pages/index.html'
-            # print(page_path)
             file = 'index.html'
-
-        # if file == '/':
-        #    page_path = dir_path + '/../pages/index.html'
-        #     print(page_path)
-        #    file = 'index.html'
-
-        # if file == '/admin':
-        #     page_path = dir_path + '/../pages/admin/index.html'
-        #     print(page_path)
-        #     file = 'admin/index.html'
 
         # For files like: '/Tame%20Impala%20-%20Borderline%20(Official%20Audio)%20(256%20kbps).mp3'
         if '%20' in file:
