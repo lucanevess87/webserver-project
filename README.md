@@ -14,3 +14,4 @@ Este servidor web é capaz de lidar com vários tipos de erros HTTP, como 400 Ba
 ## OBS!!
 1. Para testar error 403 Forbidden Request é só passar na url "/admin"
 2. Para testar error 404 Not Found é só passar na url qualquer arquivo inexistente, ex "arquivo-fake.jpeg"
+3. Para testar error 400 Bad request é só passar na url um arquivo sem extensão, ex: "localhost:1111/arquivo-fake"
