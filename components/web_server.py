@@ -176,14 +176,19 @@ class WebServer:
 
                     # file not found error
                     elif specifications.file[1:].split('/')[0] not in self.documents_list:
-                        self.handle_error(socket_client, 404)
-                        print('error 404\n')
+                        # bad request => if users dont add file extension
+                        if specifications.extension == '' or specifications.extension == None:
+                            self.handle_error(socket_client, 400)
+                            print('error 400\n')
+                        else:
+                            self.handle_error(socket_client, 404)
+                            print('error 404\n')
 
                     else:
                         self.handle_success(specifications, socket_client)
                         print('200 ok\n')
                 except:
-                    # server lost error
+                    # bad request
                     print('error 400\n')
                     traceback.print_exc()
                     self.handle_error(socket_client, 400)
