@@ -40,7 +40,7 @@ class WebServer:
             first_line += 'HTTP Version Not Supported\r\n'
 
         # The proper error file is inside errors folder
-        file = f'{self.errors_folder}/html{error_type}.html'
+        file = f'{self.errors_folder}/error{error_type}.html'
 
         # Designing response
         response = ''

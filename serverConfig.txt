@@ -1,2 +1,2 @@
-LocalFolder;
-LocalErrors;
+LocalFolder;C:\Users\lucan\OneDrive\Documentos\Redes\webserver-project\local
+LocalErrors;C:\Users\lucan\OneDrive\Documentos\Redes\webserver-project\errors
